@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+*.env
+*.egg-info/
+dist/
+build/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Environment Files (specific to our services)
+auth_service/.env
+user_service/.env
+order_service/.env
+nginx/.env
+

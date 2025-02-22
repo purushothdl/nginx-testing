@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    env_file:
+      - ./nginx/.env
+    depends_on:
+      - auth_service
+      - user_service_1
+      - user_service_2
+      - order_service_1
+      - order_service_2
+
+  auth_service:
+    build: ./auth_service
+    env_file:
+      - ./auth_service/.env
+    ports:
+      - "8001:8000"  
+      
+  user_service_1:
+    build: ./user_service
+    env_file:
+      - ./user_service/.env
+
+  user_service_2:
+    build: ./user_service
+    env_file:
+      - ./user_service/.env
+
+  order_service_1:
+    build: ./order_service
+    env_file:
+      - ./order_service/.env
+
+  order_service_2:
+    build: ./order_service
+    env_file:
+      - ./order_service/.env
