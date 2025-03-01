@@ -110,7 +110,7 @@ project-root/
    - NGINX listens on `http://localhost:80`.
    - Auth Service exposed on `http://localhost:8001` (optional direct access).
    - **Running the System**: Docker Compose output showing NGINX Gateway and load-balanced microservices in action.
-     ![Docker Compose Output](docker-compose-output.png)
+     ![Docker Compose Output](output/docker-compose-output.png)
 
 ---
 
