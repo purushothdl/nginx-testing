@@ -1,4 +1,3 @@
-
 # Microservices Playground: NGINX, FastAPI, and JWT Auth
 
 A hands-on learning project to explore microservices architecture with NGINX routing, load balancing, and JWT authentication using FastAPI and MongoDB.
@@ -50,7 +49,7 @@ project-root/
 │   ├── .env                  # Secret key for NGINX
 │   ├── Dockerfile            # NGINX container setup
 │   ├── nginx.conf            # Main NGINX config
-│   └── public.pem            # Empty (HS256 doesn’t need it)
+│   └── public.pem            # Empty (HS256 doesn't need it)
 ├── auth_service/             # User auth and JWT generation
 ├── user_service/             # User profile management
 ├── order_service/            # Order CRUD operations
@@ -102,7 +101,7 @@ project-root/
      SECRET_KEY=your-secret-key-here
      ALGORITHM=HS256
      ```
-   - NGINX’s `.env` only needs `SECRET_KEY=your-secret-key-here`.
+   - NGINX's `.env` only needs `SECRET_KEY=your-secret-key-here`.
 
 3. **Run It**:
    ```bash
@@ -110,6 +109,8 @@ project-root/
    ```
    - NGINX listens on `http://localhost:80`.
    - Auth Service exposed on `http://localhost:8001` (optional direct access).
+   - **Running the System**: Docker Compose output showing NGINX Gateway and load-balanced microservices in action.
+     ![Docker Compose Output](docker-compose-output.png)
 
 ---
 
@@ -160,7 +161,7 @@ curl -X DELETE "http://localhost/orders/<order_id>" \
 
 ## Lessons Learned
 
-- **NGINX Mastery**: Configured routing, load balancing, and Lua-based JWT validation—debugging those “location not allowed” errors was a grind!
+- **NGINX Mastery**: Configured routing, load balancing, and Lua-based JWT validation—debugging those "location not allowed" errors was a grind!
 - **Microservices**: Built clean, dependency-injected services with FastAPI and a domain-driven vibe.
 - **JWT Auth**: Got the hang of token signing/verification and passing user context securely.
 - **Docker Compose**: Orchestrated multiple services like a pro—load balancing in action was dope.
