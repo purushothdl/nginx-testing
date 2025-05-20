@@ -6,7 +6,7 @@ A hands-on learning project to explore microservices architecture with NGINX rou
 
 ## Overview
 
-This project is a sample microservices system built from scratch to dive into real-world backend and DevOps concepts. It features three services—Auth, User, and Order—connected through an NGINX API Gateway that handles routing, load balancing, and JWT token validation. The goal? Learn how to stitch together modern tools into a scalable, secure setup while keeping it clean and practical.
+This project is a microservices system developed from the ground up to provide hands-on experience with real-world backend and DevOps concepts. It comprises three core services—Auth, User, and Order—interconnected via an NGINX API Gateway. The gateway manages routing, load balancing, and JWT token validation. The primary objective is to understand how to integrate modern tools into a scalable and secure system while maintaining clarity and practicality.
 
 ---
 
@@ -161,10 +161,10 @@ curl -X DELETE "http://localhost/orders/<order_id>" \
 
 ## Lessons Learned
 
-- **NGINX Mastery**: Configured routing, load balancing, and Lua-based JWT validation—debugging those "location not allowed" errors was a grind!
-- **Microservices**: Built clean, dependency-injected services with FastAPI and a domain-driven vibe.
-- **JWT Auth**: Got the hang of token signing/verification and passing user context securely.
-- **Docker Compose**: Orchestrated multiple services like a pro—load balancing in action was dope.
-- **Real-World Skills**: Tackled practical challenges like env management and proxy headers.
+- **NGINX Configuration**: Mastered routing, load balancing, and Lua-based JWT validation.
+- **Microservices Architecture**: Developed clean, dependency-injected services with FastAPI.
+- **JWT Authentication**: Gained proficiency in token signing, verification, and secure user context passing.
+- **Docker Compose**: Orchestrated multiple services effectively, observing load balancing in action.
+- **Practical Skills**: Addressed real-world challenges such as environment management and proxy headers.
 
 ---
